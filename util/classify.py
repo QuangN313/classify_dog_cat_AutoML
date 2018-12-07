@@ -37,7 +37,7 @@ def classify():
     # build_model
     clf = ImageClassifier(verbose=True)
     clf.fit(x_train_data, y_train_data, time_limit=12 * 60 * 60)
-    clf.load_searcher().load_best_model().produce_keras_model().save(os.path.join(DIR_NAME, 'model.h5'))
+    clf.load_searcher().load_best_model().produce_keras_model().save(os.path.join(DIR_NAME, 'util/tmp/model.h5'))
     training_time = (time.time() - start_time) / 60
     # classify_test_data
     start_predict_time = time.time()
