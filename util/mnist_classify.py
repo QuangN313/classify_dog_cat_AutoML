@@ -14,4 +14,4 @@ if __name__ == '__main__':
     clf.load_searcher().load_best_model().produce_keras_model().save(os.join.path(DIR_NAME, 'util/tmp/model.h5'))
     y = clf.evaluate(x_test, y_test)
     with open(os.path.join(DIR_NAME, 'util/report.txt'), 'a') as f:
-        f.writelines(f"Evaluation: {y}")
+        f.write(f"Evaluation: {y}")
