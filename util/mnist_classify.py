@@ -7,7 +7,7 @@ if __name__ == '__main__':
     x_test = x_test.reshape(x_test.shape + (1,))
 
     clf = autokeras.ImageClassifier(verbose=True)
-    clf.fit(x_train, y_train, time_limit=12 * 60 * 60)
+    clf.fit(x_train, y_train, time_limit=5 * 60)
     clf.final_fit(x_train, y_train, x_test, y_test, retrain=True)
     y = clf.evaluate(x_test, y_test)
     print(y)
