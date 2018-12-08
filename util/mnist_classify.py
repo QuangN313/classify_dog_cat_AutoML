@@ -11,7 +11,7 @@ if __name__ == '__main__':
     clf = autokeras.ImageClassifier(verbose=True)
     clf.fit(x_train, y_train, time_limit=30 * 60)
     clf.final_fit(x_train, y_train, x_test, y_test, retrain=True)
-    clf.export_autokeras_model(os.join.path(DIR_NAME, 'util/tmp/model.h5'))
+    clf.export_autokeras_model(os.path.join(DIR_NAME, 'util/tmp/model.h5'))
     y = clf.evaluate(x_test, y_test)
     with open(os.path.join(DIR_NAME, 'util/report.txt'), 'a') as f:
         f.write(y)
